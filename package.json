@@ -1,0 +1,23 @@
+{
+  "name": "CDA-Website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jli0423/CDA-Web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jli0423/CDA-Web/issues"
+  },
+  "homepage": "https://github.com/Jli0423/CDA-Web#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
