@@ -2,6 +2,11 @@
 * {
   margin: 0;
   padding: 0;
+  text-transform: uppercase;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
 }
 
 body {
@@ -12,13 +17,13 @@ body {
 }
 
 .p {
-  font-size: 14px;
+  font-size: 12px;
 }
 
-
+/*Logo and Top Slogan*/
 .top-bar{
   width:100%;
-  font-size: 22px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -58,16 +63,20 @@ img{
   width:100%;
 }
 
+
+/*navigation bar*/
 li.nav-item{
   margin-top: 10px;
   padding-left: 5px;
 }
 
 a.nav-link, a.nav-link:visited{
+  font-size: 16px;
   background-color: grey;
   color: white;
   font-weight: 700;
-  font-size: 20px;
+  text-align: center;
+  border-radius: 3px;
 }
 
 a.nav-link:hover{
@@ -82,3 +91,47 @@ a.nav-link:hover{
 a.nav-link:active{
   color: #e71d26;
 }
+
+li.nav-item{
+  width: 100%;
+}
+
+/*Home styling*/
+
+.home{
+    padding-top: 20px;
+}
+
+.test-container{
+  padding-top: 5px;
+  padding-left: 19px !important;
+}
+
+.btn-road-test, .btn-road-test:active, .btn-road-test:visited{
+  text-decoration: none !important;
+  text-align: center;
+  color: #e71d26 !important;
+  border: 1px solid #e71d26;
+  background: transparent;
+  border-radius: 3px;
+}
+
+.btn-road-link, .btn-road-link:visited, .btn-road-link:active{
+  width:100% !important;
+  color: #e71d26 !important;
+  margin-top: 4px;
+}
+
+.btn-road-test:hover{
+  background-color: #e71d26;
+}
+
+.btn-road-link:hover{
+  color: white !important;
+}
+
+
+a > h3{
+  font-size: 16px;
+  font-weight: 500;
+  }
