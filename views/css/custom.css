@@ -76,7 +76,8 @@ a.nav-link, a.nav-link:visited{
   color: white;
   font-weight: 700;
   text-align: center;
-  border-radius: 3px;
+  border-radius: 14px;
+
 }
 
 a.nav-link:hover{
