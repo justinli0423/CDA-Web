@@ -22,6 +22,7 @@ body {
 }
 
 .red, .text {
+  line-height: 125% !important;
   text-transform: none !important;
 }
 
