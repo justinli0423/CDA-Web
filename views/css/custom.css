@@ -1,4 +1,5 @@
 /*Generic CSS*/
+
 * {
   margin: 0;
   padding: 0;
@@ -20,49 +21,52 @@ body {
   font-size: 12px;
 }
 
-.red, .text{
+.red, .text {
   text-transform: none !important;
 }
 
-.red{
+.red {
   color: #e71d26;
 }
 
-.bold{
+.bold {
   font-weight: bolder;
 }
 
+
 /*Logo and Top Slogan*/
-.top-bar{
-  width:100%;
+
+.top-bar {
+  width: 100%;
   font-size: 20px;
   text-align: center;
 }
 
-.logo-left{
+.logo-left {
   border-bottom-left-radius: 70%;
 }
 
-.logo-right{
+.logo-right {
   border-bottom-right-radius: 70%;
 }
-.logo-left, .logo-right{
+
+.logo-left, .logo-right {
   width: 12px;
   height: 260px;
   background-color: #EDEDEC;
 }
 
-.logo-main{
+.logo-main {
   width: 425px;
   height: 260px;
   border: 0;
 }
 
-.logo-road{
+.logo-road {
   width: 531px;
 }
 
-.logo-center{
+.logo-center {
   width: 100%;
   border: 0;
   padding: 0;
@@ -71,28 +75,28 @@ body {
   background-color: #EDECEC !important;
 }
 
-img{
-  width:100%;
+img {
+  width: 100%;
 }
 
 
 /*navigation bar*/
-li.nav-item{
+
+li.nav-item {
   margin-top: 10px;
   padding-left: 5px;
 }
 
-a.nav-link, a.nav-link:visited{
+a.nav-link, a.nav-link:visited {
   font-size: 16px;
   background-color: grey;
   color: white;
   font-weight: 700;
   text-align: center;
   border-radius: 14px;
-
 }
 
-a.nav-link:hover{
+a.nav-link:hover {
   color: white;
   background-color: #e71d26;
   transition: all 1s;
@@ -101,26 +105,27 @@ a.nav-link:hover{
   -o-transition: all 1s;
 }
 
-a.nav-link:active{
+a.nav-link:active {
   color: #e71d26;
 }
 
-li.nav-item{
+li.nav-item {
   width: 100%;
 }
 
+
 /*Home styling*/
 
-.home{
-    padding-top: 20px;
+.home {
+  padding-top: 20px;
 }
 
-.test-container{
+.test-container {
   padding-top: 5px;
   padding-left: 19px !important;
 }
 
-.btn-road-test, .btn-road-test:active, .btn-road-test:visited{
+.btn-road-test, .btn-road-test:active, .btn-road-test:visited {
   text-decoration: none !important;
   text-align: center;
   color: #e71d26 !important;
@@ -130,39 +135,55 @@ li.nav-item{
   margin-bottom: 10px;
 }
 
-.btn-road-link, .btn-road-link:visited, .btn-road-link:active{
-  width:100% !important;
+.btn-road-link, .btn-road-link:visited, .btn-road-link:active {
+  width: 100% !important;
   color: #e71d26 !important;
   margin-top: 4px;
 }
 
-.btn-road-test:hover{
+.btn-road-test:hover {
   background-color: #e71d26;
 }
 
-.btn-road-link:hover{
+.btn-road-link:hover {
   color: white !important;
 }
 
-a > h3{
+a>h3 {
   font-size: 16px;
   font-weight: 500;
 }
 
-.discount-img{
+.discount-img {
   border-radius: 23px;
   margin-bottom: 10px;
 }
 
-li.text{
+li.text {
+  padding-left: 23px;
+  list-style-type: disc;
   list-style-position: inside;
+  text-indent: -1.43em;
 }
+
+.civic-intro {
+  width: 100%;
+  padding-top: 42px;
+}
+
+.classroom-intro {
+  width: 100%;
+  padding-top: 210px;
+}
+
+
 /*footer*/
-.footer-line{
-  width:100%;
+
+.footer-line {
+  width: 100%;
   height: 15px;
 }
 
-.copyright{
+.copyright {
   font-size: 12px !important;
 }
