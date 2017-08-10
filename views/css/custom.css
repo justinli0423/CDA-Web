@@ -44,9 +44,6 @@ body {
   text-indent: -1.43em;
 }
 
-.expand{
-  padding-bottom: 32px;
-}
 /*Logo and Top Slogan*/
 
 .top-bar {
@@ -234,11 +231,6 @@ div.gray:hover{
   position: absolute;
 }
 
-.underlay-less{
-  z-index: 5;
-  background-color: #edecec;
-}
-
 #register{
   display: inline-block;
   text-align: center;
@@ -247,6 +239,11 @@ div.gray:hover{
   z-index: 0;
   overflow: hidden;
 }
+
+.register-container{
+  border: 1px solid #e71d26;
+}
+
 /*footer*/
 
 .footer-line {

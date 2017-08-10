@@ -7,11 +7,11 @@ $(document).ready(function(){
 // Car move right animation
 $("div.gray").hover(function(){
   $("div.lambo").stop(true, false).animate({
-    marginLeft: "290px"
+    marginLeft: "85%"
   });
 
   $("#register").stop(true, false).animate({
-   'text-indent': "45%"
+   'text-indent': "30%"
   });
 }, function(){
   $("div.lambo").stop(true, false).animate({
