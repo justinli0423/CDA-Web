@@ -5,12 +5,20 @@ $(document).ready(function(){
 });
 
 // Car move right animation
-$("div.lambo").hover(function(){
-  $(this).stop(true,false).animate({
-    marginLeft: "300px"
+$("div.gray").hover(function(){
+  $("div.lambo").stop(true, false).animate({
+    marginLeft: "290px"
+  });
+
+  $("#register").stop(true, false).animate({
+   'text-indent': "45%"
   });
 }, function(){
-  $(this).stop(true,false).animate({
+  $("div.lambo").stop(true, false).animate({
     marginLeft: "0px"
+  });
+
+  $("#register").stop(true, false).animate({
+    'text-indent': "-200px"
   });
 });

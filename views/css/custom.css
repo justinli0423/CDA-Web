@@ -44,6 +44,9 @@ body {
   text-indent: -1.43em;
 }
 
+.expand{
+  padding-bottom: 32px;
+}
 /*Logo and Top Slogan*/
 
 .top-bar {
@@ -199,6 +202,10 @@ div.gray{
   border-color: gray !important;
 }
 
+div.gray:hover{
+  border: 1px solid #e71d26 !important;
+
+}
 .tab{
   /*margin-left: 70px;*/
   text-align: right;
@@ -213,6 +220,32 @@ div.gray{
 .lambo{
   width: 15%;
   margin-left: 0;
+  z-index: 10;
+  padding-right: 10px;
+}
+
+#container{
+  position: relative;
+}
+
+.lambo, .underlay{
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.underlay-less{
+  z-index: 5;
+  background-color: #edecec;
+}
+
+#register{
+  display: inline-block;
+  text-align: center;
+  text-indent: -200px;
+  white-space: nowrap;
+  z-index: 0;
+  overflow: hidden;
 }
 /*footer*/
 
