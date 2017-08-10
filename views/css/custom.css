@@ -254,6 +254,15 @@ div.gray:hover{
   border: 1px solid transparent;
   border-radius: 5px;
 }
+
+/*Schedule*/
+.register-link{
+  text-decoration: none !important;
+}
+
+.register-link:hover{
+  color: #e71d26;
+}
 /*footer*/
 
 .footer-line {
