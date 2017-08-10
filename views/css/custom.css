@@ -177,6 +177,26 @@ li.text {
   padding-top: 210px;
 }
 
+/*Services*/
+.package{
+  border: 1px solid #e71d26;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+div.gray{
+  border-color: gray !important;
+}
+
+.tab{
+  margin-left: 70px;
+}
+
+.tab-less{
+  margin-left: 30px !important;
+}
 
 /*footer*/
 
