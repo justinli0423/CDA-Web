@@ -263,6 +263,12 @@ div.gray:hover{
 .register-link:hover{
   color: #e71d26;
 }
+
+/*Contact Us*/
+#map{
+  height: 300px;
+  Width: 100%;
+}
 /*footer*/
 
 .footer-line {
