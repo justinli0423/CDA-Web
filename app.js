@@ -32,7 +32,10 @@ app.get('/registration', (req, res)=>{
 });
 
 app.post('/formProcess', urlencodedParser, (req, res)=>{
-  var data = req.body.firstName;
+  var firstName = req.body.firstName;
+  var lastName = req.body.lastName;
+  var number = req.body.number;
+  var email = req.body.email;
   let transporter = nodemailer.createTransport({
     service: "Gmail",
     secure: false,
@@ -50,7 +53,7 @@ app.post('/formProcess', urlencodedParser, (req, res)=>{
     from: '"CDA Registration" <cdaregister@gmail.com',
     to: 'justin.li0423@gmail.com',
     subject: 'Student Registration',
-    text: 'Pce'
+    text: 'Name: ' + firstName + ' ' + lastName + '\n\nNumber: ' + number + '\n\nEmail: ' + email
   };
 
   transporter.sendMail(HelperOptions, (error, info)=>{
