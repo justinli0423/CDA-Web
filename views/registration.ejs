@@ -109,9 +109,9 @@
           <h4 class = "text red">Registration</h4>
           <h6 class = "bold text">Please complete the form below:</h6>
           <div class="form-group">
-            <label for="inputsm">
+            <label for="inputsm" required = "true">
               <p class = "text">
-              First Name <span class = "red">*</span>
+              First Name
               </p>
             </label>
             <input class="form-control input-sm" id="inputsm" type="text">
@@ -119,7 +119,7 @@
           <div class="form-group">
             <label for="inputsm">
               <p class = "text">
-              Last Name <span class = "red">*</span>
+              Last Name
               </p>
             </label>
             <input class="form-control input-sm" id="inputsm" type="text">
@@ -127,7 +127,7 @@
           <div class="form-group">
             <label for="inputsm">
               <p class = "text">
-              Phone Number <span class = "red">*</span>
+              Phone Number
               </p>
             </label>
             <input class="form-control input-sm" id="inputsm" type="text">
@@ -135,7 +135,7 @@
           <div class="form-group">
             <label for="inputsm">
               <p class = "text">
-              Email <span class = "red">*</span>
+              Email
               </p>
             </label>
             <input class="form-control input-sm" id="inputsm" type="text">
@@ -143,7 +143,7 @@
           <div class="form-group">
             <label for="sel1">
               <p class = "text">
-                Course Selection <span class = "red">*</span>
+                Course Selection
               </p>
             </label>
             <select class="form-control" id="sel1">
@@ -156,14 +156,14 @@
           </div>
           <div class = "form-group">
             <p class = "text">
-              Requested Start Date <span class = "red">*</span>
+              Requested Start Date
             </p>
             <input type = "text" class = "form-control" id = "datepicker"/>
           </div>
           <div class="form-group">
             <label for="sel1">
               <p class = "text">
-                How Did You Find Us <span class = "red">*</span>
+                How Did You Find Us
               </p>
             </label>
             <select class="form-control" id="sel1">
@@ -173,7 +173,7 @@
             </select>
           </div>
           <div class = "form-group">
-            <button type="button" class="btn btn-primary register-submit">Submit <i class = "fa fa-check" aria-hidden="true"></i></button>
+            <button type="button" class="btn btn-primary register-submit" onclick = "this.blur()">Submit <i class = "fa fa-check" aria-hidden="true"></i></button>
           </div>
         </div>
         <div class = "col-md-3">

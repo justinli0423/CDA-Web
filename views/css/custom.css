@@ -284,7 +284,7 @@ option{
   text-transform: none !important;
 }
 
-.register-submit, .register-submit:active{
+.register-submit, .register-submit:active, .register-submit:focus{
   background-color: transparent !important;
   border: 1px solid #e71d26 !important;
   color: #e71d26 !important;
@@ -295,6 +295,7 @@ option{
   border: 1px solid #e71d26 !important;
   color: white !important;
 }
+
 /*footer*/
 
 .footer-line {
