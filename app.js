@@ -30,6 +30,10 @@ app.get('/testimonials', (req, res)=>{
   res.render('testimonials');
 });
 
+app.get('/questions', (req, res)=>{
+  res.render('qna');
+});
+
 app.get('/contact-us', (req, res)=>{
   res.render('contact');
 });

@@ -4,6 +4,11 @@ $(document).ready(function(){
   new WOW().init();
 });
 
+// load page on top
+$(window).on('beforeunload', function(){
+  $(window).scrollTop(0);
+});
+
 // Car move right animation
 $("div.gray").hover(function(){
   $("div.lambo").stop(true, false).animate({
