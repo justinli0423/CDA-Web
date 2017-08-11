@@ -90,49 +90,26 @@
           </div>
         </div>
         <div class = "col-md-5">
-          <h4 class = "text">Welcome to <span class= "red"> Canadian Driving Academy</span></h2>
-            <h6 class = "bold text">
-              Why choose Canadian Driving Academy as your driving education provider?
-            </h6>
-            <p class = "text">We offer high quality driver training for beginners, intermediates, and advanced drivers. We are dedicated to serving students from all walks of life and ensuring they learn the skills and attitude necessary to become safe and defensive drivers.
-            </p>
-          <h6 class ="text red">About Canadian Driving Academy</h6>
+          <h4 class = "text red">Contact Us</h4>
+          <h6 class = "text bold">Address:</h6>
           <p class = "text">
-            Canadian Driving Academy provides Ministry Approved Driving Education Courses to all students. We provide our students with fully qualified instructors who are patient, professional and knowledgeable. Our instructors will prepare you for a lifetime of safe driving and ensure that you have the confidence to drive defensively and responsibly.
+            285 Weber St. North Unit #1A<br />
+            Waterloo, Ontario <br />
+            N2J 3H8
           </p>
-          <h6 class = "text red">Why Choose Us?</h6>
-          <ul class ="text">
-            <li class ="text">
-              All vehicles use automatic transmission
-            </li>
-            <li class ="text">
-              Complete Drivers Education Course
-            </li>
-            <li class ="text">
-              Private in-car lessons
-            </li>
-            <li class ="text">
-              Professionally trained instructors
-            </li>
-            <li class ="text">
-              Cars available to clients for driving test
-            </li>
-            <li class ="text">
-              Member of the Driving School Association of Ontario
-            </li>
-            <li class ="text">
-              M.T.O Approved Driver Education Course
-            </li>
-            <li class ="text">
-              Felixible Hours
-            </li>
-            <li class ="text">
-              Pick-up and Drop-off (Anywhere in Kitchener/Waterloo)
-            </li>
-            <li class ="text">
-              BDE Graduates with a Driver's Licence History may be eligible for an insurance discount.
-            </li>
-          </ul>
+          <h6 class = "text bold">Phone Number:</h6>
+          <p class = "text">
+            (519) 880-0030
+          </p>
+          <h6 class = "text bold">Email:</h6>
+          <p class = "text">
+            Canadiandrivingacademy@gmail.com
+          </p>
+          <h6 class = "text bold">Have a specific instructor in mind?</h6>
+          <p class = "text">
+            Wei Li: (226) 600 0836 <br />WeChat ID: CanadianDA
+          </p>
+           <div id="map"></div>
         </div>
         <div class = "col-md-3">
             <img class = "civic-intro" src = "/images/civic.png"/>
@@ -153,6 +130,33 @@
       </div>
     </div>
   </section>
-  <script src="/js/bootstrap.min.js">
+  <script>
+      function initMap() {
+        var cda = {lat: 43.480543, lng: -80.522755};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: cda
+        });
+        var contentString = '<h6 class = "text bold">Canadian Driving Academy</h6><p class = "text">285 Weber St. North Unit #1A<br />Waterloo, Ontario <br />N2J 3H8</p><a href="https://www.google.ca/maps/dir//Canadian+Driving+Academy+Inc.,+285+Weber+St+N+%237,+Waterloo,+ON+N2J+3H8/@43.4735023,-80.551547,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x882bf3f34aa778f9:0x6e19cf6bbb79f48c!2m2!1d-80.522667!2d43.4802095">Click here for directions</a>';
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: cda,
+          map: map,
+          title: 'Canadian Driving Academy'
+        });
+        marker.addListener('click', function() {
+        infowindow.open(map, marker);
+        });
+      }
+    </script>
+  <script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYOf583hs23xB5vZ7KhC4UjZ1Qy6obmbc&callback=initMap">
+  </script>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
 </body>
 </html>
