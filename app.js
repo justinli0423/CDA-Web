@@ -1,6 +1,11 @@
 const express = require('express');
+const nodemailer = require('nodemailer');
+const bodyParser = require('body-parser');
 
 var app = express();
+var urlencodedParser = bodyParser.urlencoded({
+  extended: false
+});
 
 app.use('/', express.static('views'));
 app.set('view engine', 'ejs');
@@ -24,6 +29,38 @@ app.get('/schedule', (req, res)=>{
 
 app.get('/registration', (req, res)=>{
   res.render('registration');
+});
+
+app.post('/formProcess', urlencodedParser, (req, res)=>{
+  var data = req.body.firstName;
+  let transporter = nodemailer.createTransport({
+    service: "Gmail",
+    secure: false,
+    port: 25,
+    auth:{
+      user: "cdaregister@gmail.com",
+      pass: "416419416"
+    },
+    tls:{
+      rejectUnauthorized: false
+    }
+  });
+
+  let HelperOptions ={
+    from: '"CDA Registration" <cdaregister@gmail.com',
+    to: 'justin.li0423@gmail.com',
+    subject: 'Student Registration',
+    text: 'Pce'
+  };
+
+  transporter.sendMail(HelperOptions, (error, info)=>{
+    if(error){
+      return console.log(error);
+    }else{
+      console.log("msg was sent");
+      console.log(data);
+    }
+  });
 });
 
 app.get('/testimonials', (req, res)=>{
