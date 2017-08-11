@@ -63,3 +63,9 @@ $(".register-box").hover(function(){
     'color': "#e71d26"
   });
 });
+
+// calendar slide down
+$(function(){
+  $("#datepicker").datepicker();
+  $("#datepicker").datepicker("option", "showAnim", "blind");
+})

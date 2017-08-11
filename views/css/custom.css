@@ -269,6 +269,32 @@ div.gray:hover{
   height: 300px;
   Width: 100%;
 }
+
+/*Registration*/
+label > p.text{
+  padding: 0;
+  margin: 0;
+}
+
+.form-control{
+  padding: 5px !important;
+}
+
+option{
+  text-transform: none !important;
+}
+
+.register-submit, .register-submit:active{
+  background-color: transparent !important;
+  border: 1px solid #e71d26 !important;
+  color: #e71d26 !important;
+}
+
+.register-submit:hover{
+  background-color: #e71d26 !important;
+  border: 1px solid #e71d26 !important;
+  color: white !important;
+}
 /*footer*/
 
 .footer-line {
