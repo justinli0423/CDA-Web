@@ -50,43 +50,12 @@ a, a:hover{
 
 /*Logo and Top Slogan*/
 
-.top-bar {
+.logo{
   width: 100%;
-  font-size: 20px;
-  text-align: center;
-}
-
-.logo-left {
-  border-bottom-left-radius: 70%;
-}
-
-.logo-right {
-  border-bottom-right-radius: 70%;
-}
-
-.logo-left, .logo-right {
-  width: 12px;
-  height: 260px;
-  background-color: #EDEDEC;
-}
-
-.logo-main {
-  width: 425px;
-  height: 260px;
-  border: 0;
-}
-
-.logo-road {
-  width: 531px;
-}
-
-.logo-center {
-  width: 100%;
-  border: 0;
-  padding: 0;
-  border-spacing: 0;
-  text-align: center !important;
-  background-color: #EDECEC !important;
+  height: 280px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("../images/headerpic.PNG");
 }
 
 img {
