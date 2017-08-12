@@ -1,6 +1,16 @@
+require('./config/config');
+
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const promise = require('promise');
+const MongoClient = require('mongodb').MongoClient;
+const path = require('path');
+
+const port = process.env.PORT || 3000;
+
+var {mongoose} = require('./db/mongoose');
+var {Comment} = require('./models/comments');
 
 var app = express();
 var urlencodedParser = bodyParser.urlencoded({
@@ -85,10 +95,25 @@ app.get('/questions', (req, res)=>{
   res.render('qna');
 });
 
+
+// Retrieving comments and call trigger method
+app.post('/comment', urlencodedParser, (req, res)=>{
+  let comment = new Comment({
+    name : req.body.name,
+    email: req.body.email,
+    comment: req.body.comment
+  });
+  comment.save().then((doc)=>{
+    res.send(doc);
+  }).catch((e)=>{
+    res.status(400).send();
+  });
+});
+
 app.get('/contact-us', (req, res)=>{
   res.render('contact');
 });
 
-app.listen(3000, ()=>{
-  console.log('Server is up on port 3000');
+app.listen(port, ()=>{
+  console.log(`Server is up on port ${port}`);
 });
