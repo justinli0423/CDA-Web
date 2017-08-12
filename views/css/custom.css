@@ -307,8 +307,14 @@ option{
   text-decoration: none !important;
 }
 
-/*footer*/
+/*QnA */
+#questions{
+  padding-bottom: 150px !important;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
+/*footer*/
 .footer-line {
   width: 100%;
   height: 15px;
