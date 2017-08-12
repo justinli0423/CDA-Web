@@ -9,7 +9,24 @@ $(window).on('beforeunload', function(){
   $(window).scrollTop(0);
 });
 
-// Car move right animation
+// Header volkswagen
+$("div.header-hover").hover(function(){
+  $("img.volkswagen").stop(true,true).animate({
+    top: "60px",
+    left: "580px",
+    height: "260px",
+    width: "420px"
+  });
+}, function(){
+  $("img.volkswagen").stop(true,true).animate({
+    top: "140px",
+    left: "1000px",
+    height: "53px",
+    width: "81px"
+  });
+});
+
+// Car move right animation (packages page)
 $("div.gray").hover(function(){
   $("div.lambo").stop(true, false).animate({
     marginLeft: "30%"
@@ -67,4 +84,4 @@ $(".register-box").hover(function(){
 // calendar slide down
 $(function(){
   $("#datepicker").datepicker("option", "showAnim", "blind");
-})
+});

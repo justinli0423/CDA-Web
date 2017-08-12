@@ -1,3 +1,17 @@
+/*small devices*/
+@media only screen and (max-width: 767px){
+  .volkswagen{
+    display: none;
+  }
+}
+
+/*small devices and tablets*/
+@media only screen and (max-width: 768px){
+  .volkswagen{
+    display: none;
+  }
+}
+
 /*Generic CSS*/
 
 * {
@@ -53,11 +67,21 @@ a, a:hover{
 .logo{
   width: 100%;
   height: 280px;
+  background-size: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("../images/headerpic.PNG");
 }
 
+.volkswagen{
+  width: 81px;
+  height: 53px;
+  position: absolute;
+  top: 140px;
+  left: 1000px;
+  box-shadow: inset -250px 0 50px 10px transparent;
+
+}
 img {
   width: 100%;
 }
