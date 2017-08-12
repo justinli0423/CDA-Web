@@ -64,6 +64,11 @@ a, a:hover{
 
 /*Logo and Top Slogan*/
 
+h4.top-bar{
+  font-size:20px;
+  text-align: center;
+}
+
 .logo{
   width: 100%;
   height: 280px;
