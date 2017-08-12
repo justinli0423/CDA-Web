@@ -57,7 +57,7 @@ app.post('/formProcess', urlencodedParser, (req, res)=>{
   //extra settings for email
   let HelperOptions ={
     from: '"CDA Registration" <cdaregister@gmail.com',
-    to: 'justin.li0423@gmail.com',
+    to: 'canadiandrivingacademy@gmail.com',
     subject: 'Student Registration',
     text: 'Name: ' + firstName + ' ' + lastName + '\n\nNumber: ' + number + '\n\nEmail: ' + email
     + '\n\nRequested Course: ' + course + '\n\nPreferred Date: ' + date + '\n\nHow Did you find us: ' + refer
