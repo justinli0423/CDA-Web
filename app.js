@@ -39,6 +39,8 @@ app.post('/formProcess', urlencodedParser, (req, res)=>{
   var course = req.body.course;
   var date = req.body.date;
   var refer = req.body.find;
+
+  //bases transport for mailer object
   let transporter = nodemailer.createTransport({
     service: "Gmail",
     secure: false,
@@ -52,6 +54,7 @@ app.post('/formProcess', urlencodedParser, (req, res)=>{
     }
   });
 
+  //extra settings for email
   let HelperOptions ={
     from: '"CDA Registration" <cdaregister@gmail.com',
     to: 'justin.li0423@gmail.com',
@@ -60,14 +63,18 @@ app.post('/formProcess', urlencodedParser, (req, res)=>{
     + '\n\nRequested Course: ' + course + '\n\nPreferred Date: ' + date + '\n\nHow Did you find us: ' + refer
   };
 
+  //send mail here
   transporter.sendMail(HelperOptions, (error, info)=>{
-    if(error){
-      return console.log(error);
-    }else{
-      console.log("msg was sent");
-      console.log(data);
+    if(!error){
+      res.redirect('/completed');
+      res.status(200).send();
     }
+    res.status(400).send();
   });
+});
+
+app.get('/completed', (req, res)=>{
+    res.render('completed');
 });
 
 app.get('/testimonials', (req, res)=>{
