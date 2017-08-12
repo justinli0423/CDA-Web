@@ -88,15 +88,10 @@
         <div class = "col-md-8">
           <h4 class = "text red">Got questions? Ask away here!</h4>
           <!-- Live comments -->
-          <div class = "flash-comments">
-            <form class = "pure-form" id =:"comment-form">
-              <!-- New comments -->
-              <div class = "comments-list" id = "comments-list">
-                <!-- Display comments here -->
-              </div>
-            </form>
-          </div>
-          <form method = "post" action = "comment" >
+          <ul id = "comments">
+                        
+          </ul>
+          <form method = "post" action = "comment">
             <div class = "form-group">
               <label for = "name"><p class = "text">
                 Name
@@ -111,12 +106,12 @@
             </div>
             <div class = "form-group">
               <label for = "questions"><p class = "text">
-                Comments/Questions
+                Question(s)
               </p></label>
               <textarea class = "form-control text" id = "questions" name = "comment" required placeholder="Questions here!"></textarea>
             </div>
             <div class = "form-group">
-              <button type="submit" class="btn btn-primary register-submit" onclick = "this.blur()" action = "submit">Submit <i class = "fa fa-check" aria-hidden="true"></i></button>
+              <button type="submit" class="btn btn-primary register-submit" onclick = "this.blur()" action = "submit" id = "submit">Submit <i class = "fa fa-check" aria-hidden="true"></i></button>
             </div>
           </form>
         </div>
@@ -140,5 +135,6 @@
    <!-- custom animation js -->
     <script src="/js/wow.min.js"></script>
     <script type="text/javascript" src="/js/animate.js"></script>
+    <script type="text/javascript" src="/js/postComments.js"></script>
 </body>
 </html>

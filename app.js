@@ -95,9 +95,18 @@ app.get('/questions', (req, res)=>{
   res.render('qna');
 });
 
+// to retrieve all comments
+app.get('/comments', (req, res)=>{
+  Comment.find().then((students)=>{
+    res.send({students})
+  }).catch((e)=>{
+    res.status(400).send();
+  });
+});
 
 // Retrieving comments and call trigger method
 app.post('/comment', urlencodedParser, (req, res)=>{
+  res.redirect('/questions');
   let comment = new Comment({
     name : req.body.name,
     email: req.body.email,
