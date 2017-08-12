@@ -142,24 +142,24 @@
               <input class="form-control input-sm text" id="inputsm" type="text" name = "email" required>
             </div>
             <div class="form-group">
-              <label for="sel1">
+              <label for="course-selection">
                 <p class = "text">
                   Course Selection
                 </p>
               </label>
-              <select class="form-control" id="sel1">
-                <option><p class = "text">Complete Course</p></option>
-                <option><p class = "text">G1 Exit</p></option>
-                <option><p class = "text">G2 Exit</p></option>
-                <option><p class = "text">Single Lesson</p></option>
-                <option><p class = "text">Written Test Preperation</p></option>
+              <select class="form-control" name = "course" id="course-selection">
+                <option name = "course" value = "Complete Course"><p class = "text">Complete Course</p></option>
+                <option name = "course" value = "G1 Exit"><p class = "text">G1 Exit</p></option>
+                <option name = "course" value = "G2 Exit"><p class = "text">G2 Exit</p></option>
+                <option name = "course" value = "Single Lesson"><p class = "text">Single Lesson</p></option>
+                <option name = "course" value = "Written Test Preperation"><p class = "text">Written Test Preperation</p></option>
               </select>
             </div>
             <div class = "form-group">
               <p class = "text">
                 Requested Start Date
               </p>
-              <input type = "text" class = "form-control text" id = "datepicker"/>
+              <input type = "text" name = "date" class = "form-control text" id = "datepicker"/>
             </div>
             <div class="form-group">
               <label for="sel1">
@@ -167,10 +167,10 @@
                   How Did You Find Us
                 </p>
               </label>
-              <select class="form-control" id="sel1">
-                <option><p class = "text">Online</p></option>
-                <option><p class = "text">Friend Referral</p></option>
-                <option><p class = "text">Other</p></option>
+              <select class="form-control" name = "find" id="sel1">
+                <option><p class = "text" name = "find" value = "Online">Online</p></option>
+                <option><p class = "text" name = "find" value = "Friend Referral">Friend Referral</p></option>
+                <option><p class = "text" name = "find" value = "Other">Other</p></option>
               </select>
             </div>
             <div class = "form-group">
