@@ -314,6 +314,37 @@ option{
   overflow-y: hidden;
 }
 
+li.text{
+  list-style: none;
+}
+
+.comment{
+  /*border: 1px solid #e71d26;*/
+  border-radius: 10px;
+  padding: 10px 5px;
+  margin-bottom: 10px !important;
+  text-indent: 5px !important;
+  line-height: 1.4;
+}
+
+.profile-pic{
+  width: 7%;
+  padding-right: 20px;
+}
+
+.user-name{
+  font-weight: 600;
+  color: #e71d26;
+  font-size: 18px;
+}
+
+.user-question{
+  margin-left: 7%;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #393d40;
+}
+
 /*footer*/
 .footer-line {
   width: 100%;
