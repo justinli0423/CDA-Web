@@ -314,7 +314,7 @@ option{
   overflow-y: hidden;
 }
 
-li.text{
+li.comment{
   list-style: none;
 }
 
