@@ -6,17 +6,23 @@ const bodyParser = require('body-parser');
 const promise = require('promise');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
-
 const port = process.env.PORT || 3000;
+const uuidv1 = require('uuid/v1');
 
 var {mongoose} = require('./db/mongoose');
 var {Comment} = require('./models/comments');
+var {Admin} = require('./models/admin');
 
 var app = express();
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
 });
 
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+
+app.use(bodyParser.json());
 app.use('/', express.static('views'));
 app.set('view engine', 'ejs');
 
@@ -93,6 +99,33 @@ app.get('/testimonials', (req, res)=>{
 
 app.get('/questions', (req, res)=>{
   res.render('qna');
+});
+
+var random = uuidv1();
+
+app.get('/login', (req, res)=>{
+  res.render('login');
+});
+
+function changeId(){
+    // random = uuidv1();
+};
+
+app.post('/login', (req, res)=>{
+  let name = req.body.name;
+  let pass = req.body.pass;
+  changeId();
+  console.log(req.body.name + " " + req.body.pass + " " + random);
+  if(name !== 'admin' || pass !== 'admin'){
+    res.status(400).send();
+  }else{
+    res.redirect(`/${random}`);
+  }
+});
+
+//login page for managing QnA
+app.get(`/${random}`, (req, res)=>{
+  res.render('manage');
 });
 
 // to retrieve all comments
