@@ -334,7 +334,8 @@ li.text{
 
 .user-name{
   font-weight: 600;
-  color: #e71d26;
+  /*color: #e71d26;*/
+  color: #21abc7;
   font-size: 18px;
 }
 
@@ -343,6 +344,7 @@ li.text{
   line-height: 1.5;
   font-weight: 300;
   color: #393d40;
+  padding-top: 2px;
 }
 
 /*footer*/
