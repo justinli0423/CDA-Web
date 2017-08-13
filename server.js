@@ -7,7 +7,6 @@ const promise = require('promise');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
 const port = process.env.PORT || 3000;
-const uuidv1 = require('uuid/v1');
 
 var {mongoose} = require('./db/mongoose');
 var {Comment} = require('./models/comments');
@@ -101,31 +100,19 @@ app.get('/questions', (req, res)=>{
   res.render('qna');
 });
 
-var random = uuidv1();
-
 app.get('/login', (req, res)=>{
   res.render('login');
 });
 
-function changeId(){
-    // random = uuidv1();
-};
-
 app.post('/login', (req, res)=>{
   let name = req.body.name;
   let pass = req.body.pass;
-  changeId();
-  console.log(req.body.name + " " + req.body.pass + " " + random);
+  console.log(req.body.name + " " + req.body.pass);
   if(name !== 'admin' || pass !== 'admin'){
     res.status(400).send();
   }else{
-    res.redirect(`/${random}`);
+    res.render('manage');
   }
-});
-
-//login page for managing QnA
-app.get(`/${random}`, (req, res)=>{
-  res.render('manage');
 });
 
 // to retrieve all comments
@@ -139,6 +126,7 @@ app.get('/comments', (req, res)=>{
 
 // Retrieving comments and call trigger method
 app.post('/comment', urlencodedParser, (req, res)=>{
+  changeId();
   res.redirect('/questions');
   let comment = new Comment({
     name : req.body.name,
@@ -150,6 +138,11 @@ app.post('/comment', urlencodedParser, (req, res)=>{
   }).catch((e)=>{
     res.status(400).send();
   });
+});
+
+//delete comment
+app.post('/delete', (req, res)=>{
+
 });
 
 app.get('/contact-us', (req, res)=>{

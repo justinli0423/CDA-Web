@@ -347,6 +347,20 @@ li.comment{
   padding-top: 2px;
 }
 
+button.reply, button.delete{
+  text-align: right;
+  color: #e71d26;
+  font-weight: 600;
+  margin-left: 608px;
+}
+
+button.delete{
+  margin-top: 5px;
+}
+
+/*admin response page*/
+
+
 /*footer*/
 .footer-line {
   width: 100%;
