@@ -370,3 +370,8 @@ button.delete{
 .copyright {
   font-size: 12px !important;
 }
+
+.languages {
+  font-size: 12px;
+  text-align: right;
+}
