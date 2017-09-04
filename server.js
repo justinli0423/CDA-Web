@@ -36,7 +36,7 @@ app.get('/intro', (req, res)=>{
 });
 
 // English pages
-app.get('/eng/', (req, res)=>{
+app.get('/eng', (req, res)=>{
     res.render('english/home');
 });
 
