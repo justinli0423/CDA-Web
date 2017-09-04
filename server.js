@@ -25,6 +25,16 @@ app.use(bodyParser.json());
 app.use('/', express.static('views'));
 app.set('view engine', 'ejs');
 
+
+// selections page
+app.get('/', (req, res)=>{
+  res.redirect('/intro');
+});
+
+app.get('/intro', (req, res)=>{
+  res.render('intro');
+});
+
 // English pages
 app.get('/eng/', (req, res)=>{
     res.render('english/home');
