@@ -62,14 +62,16 @@ body{
 }
 
 .languages{
+  line-height: 0;
   position: absolute;
   font-size: 22px;
   font-weight: 600;
-  /*margin-top: 19% !important;*/
   top: 218px;
   z-index: 2;
   text-align: center;
   opacity: 0;
+  left: 39%;
+  top: 120%;
 }
 
 .english, .chinese, .english:visited, .chinese:visited, .chinese:active, .english:active{
