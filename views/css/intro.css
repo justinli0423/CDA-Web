@@ -20,7 +20,7 @@ body{
 }
 
 .full{
-  background-image: url('./../images/road.jpg');
+  background: url('./../images/road.jpg') no-repeat center center fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.5);
@@ -37,7 +37,7 @@ body{
   transition: all 4s;
   -webkit-transition: all 4s ease;
   left: 39.5%;
-  top: 20%;
+  top: 27%;
   -webkit-transform: scale(0.1);
   transform: scale(0.1);
 }
@@ -75,15 +75,16 @@ body{
 }
 
 .english, .chinese, .english:visited, .chinese:visited, .chinese:active, .english:active{
-  color: #e71d26;
+  color: #e71d26 !important;
   padding: 7px 8px;
-  border: 1px solid #e71d26;
+  border: 1px solid #e71d26!important;
+  background-color: transparent !important;
   border-radius: 5px;
 }
 
 .english:hover, .chinese:hover{
-  color: white;
-  background-color: #e71d26;
+  color: white !important;
+  background-color: #e71d26 !important;
 }
 
 .english{
