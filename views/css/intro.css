@@ -1,0 +1,92 @@
+/*intro-view page*/
+
+* {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+body{
+  overflow: hidden !important;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+.full{
+  background: url('./../images/road.jpg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: -210px;
+  width: 100%;
+  height: 125%;
+}
+
+.car{
+  height: auto;
+  position: absolute;
+  width: 400px;
+  transition: all 4s;
+  -webkit-transition: all 4s ease;
+  left: 39.5%;
+  top: 27%;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+}
+
+.car.animate{
+  top: 75%;
+  transform: scale(4);
+}
+
+.title{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  top: 100px !important;
+  text-align: center;
+}
+.welcome, .to, .cda{
+  opacity: 0;
+}
+
+.cda{
+  color: #e71d26;
+}
+
+.languages{
+  line-height: 0;
+  position: absolute;
+  font-size: 22px;
+  font-weight: 600;
+  top: 218px;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  left: 39%;
+  top: 120%;
+}
+
+.english, .chinese, .english:visited, .chinese:visited, .chinese:active, .english:active{
+  color: #e71d26 !important;
+  padding: 7px 8px;
+  border: 1px solid #e71d26!important;
+  background-color: transparent !important;
+  border-radius: 5px;
+}
+
+.english:hover, .chinese:hover{
+  color: white !important;
+  background-color: #e71d26 !important;
+}
+
+.english{
+  margin-right: 40px;
+}

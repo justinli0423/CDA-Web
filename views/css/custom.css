@@ -3,6 +3,11 @@
   .volkswagen{
     display: none;
   }
+
+  .car{
+    display: none;
+    transition: 0s !important;
+  }
 }
 
 /*small devices and tablets*/
@@ -10,8 +15,75 @@
   .volkswagen{
     display: none;
   }
+  .car{
+    display: none;
+    transition: 0s !important;
+  }
+  .languages{
+    left:33.5% !important;
+  }
 }
 
+/*ipads*/
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  .volkswagen{
+    display: none;
+  }
+  .car{
+    display: none;
+    transition: 0s !important;
+  }
+    .languages{
+      padding-left: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 1280px) and (min-width: 800px){
+  .volkswagen{
+    display: none;
+  }
+  .car{
+    display: none;
+    transition: 0s !important;
+  }
+  .languages{
+    left:33.5% !important;
+  }
+}
+
+/*Iphones 6*/
+@media only screen and (max-width: 667px) and (min-width: 375px){
+  .volkswagen{
+    display: none;
+  }
+  .car{
+    display: none;
+    transition: 0s !important;
+  }
+  .languages{
+    left:30% !important;
+  }
+  .english{
+    margin-right: 20px;
+  }
+}
+/*iPhone 6+*/
+@media only screen and (max-width: 736px) and (min-width: 414px){
+  .volkswagen{
+    display: none;
+  }
+  .car{
+    display: none;
+    transition: 0s !important;
+  }
+  .languages{
+    top: 150% !important;
+    left: 19.75% !important;
+  }
+  .english{
+    margin-right: 55px !important;
+  }
+}
 /*Generic CSS*/
 
 * {
@@ -125,7 +197,26 @@ li.nav-item {
   width: 100%;
 }
 
+.special{
+  margin-left: 10px;
+}
 
+.list-none{
+  list-style: none !important;
+  font-size: 20px;
+}
+
+.package-bold{
+  border: 2px solid #e71d26;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+.special-register{
+  color: #000;
+}
 /*Home styling*/
 
 .home {
@@ -369,4 +460,9 @@ button.delete{
 
 .copyright {
   font-size: 12px !important;
+}
+
+.languages {
+  font-size: 12px;
+  text-align: right;
 }

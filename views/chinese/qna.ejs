@@ -28,10 +28,11 @@
       </div>
     </div>
     <div class="container">
-      <a href = "/">
+    <div class="container">
+      <a href = "/cn/">
         <div class="col-md-12 header-hover">
           <div class="row logo">
-              <img class = "volkswagen" src = "images/volkswagen.png" />
+              <img class = "volkswagen" src = "../images/volkswagen.png" />
           </div>
         </div>
       </a>
@@ -43,28 +44,28 @@
         <div class ="col-md-12">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link active" href="/">Home</a>
+              <a class="nav-link active" href="/cn/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/about-us">About Us</a>
+              <a class="nav-link" href="/cn/about-us">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/services">Services</a>
+              <a class="nav-link" href="/cn/services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/schedule">Schedule</a>
+              <a class="nav-link" href="/cn/schedule">Schedule</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/registration">Registration</a>
+              <a class="nav-link" href="/cn/registration">Registration</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/testimonials">Testimonials</a>
+              <a class="nav-link" href="/cn/testimonials">Testimonials</a>
             </li>
             <!-- <li class="nav-item">
-              <a class="nav-link" href="/questions">QnA</a>
+              <a class="nav-link" href="/cn/questions">QnA</a>
             </li> -->
             <li class="nav-item">
-              <a class="nav-link" href="/contact-us">Contact</a>
+              <a class="nav-link" href="/cn/contact-us">Contact</a>
             </li>
           </ul>
         </div>
@@ -86,24 +87,37 @@
           </div>
         </div>
         <div class = "col-md-8">
-          <h4 class = "red">Course Schedule</h4>
+          <h4 class = "text">Got questions? Ask away here!</h4>
           <p class = "text">
-            Register online for day, evening or weekend classes. First come first served basis, so <a href="registration" class = "text red register-link">Register Now!</a>
+            One of our official instructors will respond to you within the next few days
           </p>
-          <h6 class = "red text">
-          Starting from June 1st, 2017, in-class lessons every Saturday from 10am - 1pm
-          </h6>
-          <p class = "text">
-            With the development of modern world there took a lot of innovations to cope up with the needs of the people in today’s life. Time is the most important factor in anyone’s life and people in modern days are always in the attempt to save a lot of time with less difficulty. A car being one of the examples of saving time procedure with effective cut-expanse way, is perhaps one of the most crucial needs of today’s life.
-            <br /><br />
-            Not just having a car ends the problem of saving time, but it also allows saving money too. Driver education is one of the options that serve to all, so as to make driving a car very easy. Not only for working people, but also homemakers and even students need driving to learn. This helps in providing basic knowledge of driving with quality training. There are even bunches of student driving academy, which can be hit upon with who take special care for the students.
-            <br /><br />
-            Deciding to go for the driving course? Then the <span class = "red text">Canadian Driving Academy Inc.</span> is the best place for anyone and everyone. It not only offer quality driving sessions to all types of drivers from beginners, intermediate to the advanced drivers, but also provides opportunity to ensure skillful learning as well as safe attitudes for the driving.
-            <br /><br />
-            This driver training school provides various ways of learning to drive. It not only provide on road driving sessions, but also train with basic theories that might be required in any point of the life while driving.
-            <br /><br />
-            <span class = "text bold">E-mail us through the registration tab if you have any further questions, or if you would like to book a session.</span>
-          </p>
+          <!-- Live comments -->
+          <ul id = "comments">
+
+          </ul>
+          <form method = "post" action = "comment">
+            <div class = "form-group">
+              <label for = "name"><p class = "text">
+                Name
+              </p></label>
+              <input type = "text" class = "form-control text" id = "name" name = "name" required autofocus placeholder="Name"/>
+            </div>
+            <div class = "form-group">
+              <label for = "firstName"><p class = "text">
+                Email
+              </p></label>
+              <input type = "text" class = "form-control text" id = "firstName" name = "email" required placeholder="Email"/>
+            </div>
+            <div class = "form-group">
+              <label for = "questions"><p class = "text">
+                Question(s)
+              </p></label>
+              <textarea class = "form-control text" id = "questions" name = "comment" required placeholder="Questions here!"></textarea>
+            </div>
+            <div class = "form-group">
+              <button type="submit" class="btn btn-primary register-submit" onclick = "this.blur()" action = "submit" id = "submit">Submit <i class = "fa fa-check" aria-hidden="true"></i></button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -111,18 +125,29 @@
   <section class = "footer">
     <div class = "container">
       <div class="row">
-        <div class ="col-md-12">
+        <div class = "col-md-12">
           <img class ="footer-line" src = "/images/footer-line.jpg"/>
+        </div>
+      </div>
+    </div>
+    <div class = "container">
+      <div class="row">
+        <div class ="col-md-8">
           <p class = "copyright">
             Canadian Driving Academy Inc. &copy; 2017
           </p>
         </div>
+        <div class = "col-md-4 languages">
+          <a href = "/eng">English</a>
+        </div>
       </div>
     </div>
   </section>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <!-- custom animation js -->
+   <!-- custom animation js -->
     <script src="/js/wow.min.js"></script>
     <script type="text/javascript" src="/js/animate.js"></script>
+    <script type="text/javascript" src="/js/postComments.js"></script>
 </body>
 </html>
