@@ -32,7 +32,8 @@ app.get('/', (req, res)=>{
 });
 
 app.get('/intro', (req, res)=>{
-  res.render('intro');
+  // res.render('intro');
+  res.redirect('/eng');
 });
 
 // English pages

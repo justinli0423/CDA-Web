@@ -197,7 +197,26 @@ li.nav-item {
   width: 100%;
 }
 
+.special{
+  margin-left: 10px;
+}
 
+.list-none{
+  list-style: none !important;
+  font-size: 20px;
+}
+
+.package-bold{
+  border: 2px solid #e71d26;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  margin-top: 15px;
+}
+
+.special-register{
+  color: #000;
+}
 /*Home styling*/
 
 .home {
