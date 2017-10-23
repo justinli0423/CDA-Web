@@ -20,85 +20,15 @@
 <body>
   <!-- Header -->
   <section class="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h4 class="top-bar">M.T.O. Approved B.D.E Course Provider, Located in the heart of Kitchener-Waterloo. Call: (519) 880 0030</h4>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-    <div class="container">
-  <a href = "/eng/">
-        <div class="col-md-12 header-hover">
-          <div class="row logo">
-              <img class = "volkswagen" src = "../images/volkswagen.png" />
-          </div>
-        </div>
-      </a>
-    </div>
+    <% include ./partials/header %>
   </section>
   <section class = "navigation-bar">
-    <div class = "container">
-      <div class = "row">
-        <div class ="col-md-12">
-          <ul class="nav justify-content-center">
-            <li class="nav-item">
-              <a class="nav-link active" href="/eng/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/eng/about-us">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/eng/services">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/eng/schedule">Schedule</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/eng/registration">Registration</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/eng/testimonials">Testimonials</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="/eng/questions">QnA</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="/eng/contact-us">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+    <% include ./partials/nav-bar %>
   </section>
   <section class = "home">
     <div class ="container">
       <div class ="row">
-        <div class = "col-md-4 test-container">
-          <div class = "btn-road-test">
-            <a href = "https://drivetest.ca/book-a-road-test/" target ="_blank" class = "btn btn-road-link"><h3><i class = "fa fa-id-card-o" aria-hidden="true"></i> Road Test Booking</h3></a>
-          </div>
-          <a href = "registration" class ="special-register">
-            <div class = "package-bold">
-              <h2 class = "text red">Reading Week Special</h6>
-              <ul class = "text special">
-                <li class = "text bold list-none">
-                  Full Course $460 Incl. Tax
-                </li>
-                <li class = "text bold list-none">
-                  Call Now (519) 880-0030
-                </li>
-                <li class = "text bold list-none">
-                  Limited Seats Available!
-                </li>
-                <li class = "text bold red center list-none">
-                  Register Now!
-                </li>
-              </ul>
-            </div>
-          </a>
-        </div>
+        <% include ./partials/left-advert %>
         <div class = "col-md-8">
           <h4 class = "red">Course Schedule</h4>
           <p class = "text">
@@ -123,25 +53,7 @@
     </div>
   </section>
   <section class = "footer">
-    <div class = "container">
-      <div class="row">
-        <div class = "col-md-12">
-          <img class ="footer-line" src = "/images/footer-line.jpg"/>
-        </div>
-      </div>
-    </div>
-    <div class = "container">
-      <div class="row">
-        <div class ="col-md-8">
-          <p class = "copyright">
-            Canadian Driving Academy Inc. &copy; 2017
-          </p>
-        </div>
-        <div class = "col-md-4 languages">
-          <a href = "/cn">中文</a>
-        </div>
-      </div>
-    </div>
+    <% include ./partials/footer %>
   </section>
   <script src="/js/bootstrap.min.js"></script>
   <!-- custom animation js -->
