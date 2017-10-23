@@ -111,45 +111,35 @@ app.get('/eng/questions', (req, res)=>{
   res.render('english/qna');
 });
 
-app.get('/eng/login', (req, res)=>{
+app.get('/login', (req, res)=>{
   res.render('english/login');
 });
 
-app.post('/eng/login', (req, res)=>{
-  let name = req.body.name;
-  let pass = req.body.pass;
-  console.log(req.body.name + " " + req.body.pass);
-  if(name !== 'admin' || pass !== 'admin'){
-    res.status(400).send();
-  }else{
-    res.render('manage');
-  }
-});
 
-// to retrieve all comments
-app.get('/eng/comments', (req, res)=>{
-  Comment.find().then((students)=>{
-    res.send({students})
-  }).catch((e)=>{
-    res.status(400).send();
-  });
-});
+// to retrieve all comments (disabled for now)
+// app.get('/eng/comments', (req, res)=>{
+//   Comment.find().then((students)=>{
+//     res.send({students})
+//   }).catch((e)=>{
+//     res.status(400).send();
+//   });
+// });
 
-// Retrieving comments and call trigger method
-app.post('/eng/comment', urlencodedParser, (req, res)=>{
-  changeId();
-  res.redirect('/eng/questions');
-  let comment = new Comment({
-    name : req.body.name,
-    email: req.body.email,
-    comment: req.body.comment
-  });
-  comment.save().then((doc)=>{
-    res.send(doc);
-  }).catch((e)=>{
-    res.status(400).send();
-  });
-});
+// Retrieving comments and call trigger method (disabled for now)
+// app.post('/eng/comment', urlencodedParser, (req, res)=>{
+//   changeId();
+//   res.redirect('/eng/questions');
+//   let comment = new Comment({
+//     name : req.body.name,
+//     email: req.body.email,
+//     comment: req.body.comment
+//   });
+//   comment.save().then((doc)=>{
+//     res.send(doc);
+//   }).catch((e)=>{
+//     res.status(400).send();
+//   });
+// });
 
 //delete comment
 app.post('/eng/delete', (req, res)=>{
