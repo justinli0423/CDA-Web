@@ -49,11 +49,11 @@ app.get('/intro', (req, res)=>{
 });
 
 // configurations for passport
-require('./config/passport.js')(passport);
+require('./config/passport')(passport);
 
 // loading routes for english and chinese pages
-require('./routes/eng-pages.js')(app, urlencodedParser);
-require('./routes/cn-pages.js')(app, urlencodedParser);
+require('./routes/eng-pages')(app, urlencodedParser);
+require('./routes/cn-pages')(app, urlencodedParser);
 
 // auth routes
 require('./routes/auth.js')(app, passport);
