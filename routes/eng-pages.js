@@ -74,11 +74,6 @@ module.exports = function(app, urlencodedParser){
     res.render('english/qna');
   });
 
-  app.get('/login', (req, res)=>{
-    res.render('english/login');
-  });
-
-
   // to retrieve all comments (disabled for now)
   // app.get('/eng/comments', (req, res)=>{
   //   Comment.find().then((students)=>{

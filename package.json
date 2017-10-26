@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Jli0423/CDA-Web#readme",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.17.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
@@ -29,6 +30,7 @@
     "morgan": "^1.9.0",
     "nodemailer": "^4.0.1",
     "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "promise": "^8.0.0"
   },
