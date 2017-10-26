@@ -2,10 +2,13 @@ require('./config/config');
 
 const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const promise = require('promise');
 const MongoClient = require('mongodb').MongoClient;
 const path = require('path');
+const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const session = require('express-session');
 const port = process.env.PORT || 3000;
 
 var {mongoose} = require('./db/mongoose');
@@ -21,7 +24,9 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use(bodyParser.json());
+app.use(morgan('dev'));
+app.use(cookieParser());
+app.use(bodyParser());
 app.use('/', express.static('views'));
 app.set('view engine', 'ejs');
 
