@@ -46,6 +46,6 @@ module.exports = function(app, passport){
       return next();
     }
     // redirect to home otherwise
-    res.redirect();
+    res.redirect('/login');
   }
 }

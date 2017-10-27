@@ -53,7 +53,7 @@ module.exports = function(passport){
   passport.use('local-login', new LocalStrategy({
     usernameField: 'username',
     passwordField: 'password',
-    passReqTocallback: true
+    passReqToCallback: true
   },
   function(req, username, password, done){ //callback with username and password
     // find user
@@ -71,7 +71,7 @@ module.exports = function(passport){
       }
 
       // if all is good
-      return done(null, user);
-    })
-  }))
+      return done(null, user)
+    });
+  }));
 };
