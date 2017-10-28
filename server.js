@@ -63,7 +63,7 @@ require('./routes/eng-pages')(app, urlencodedParser);
 require('./routes/cn-pages')(app, urlencodedParser);
 
 // auth routes
-require('./routes/auth.js')(app, passport, MongoClient);
+require('./routes/auth.js')(app, passport, MongoClient, urlencodedParser);
 
 app.listen(port, ()=>{
   console.log(`Server is up on port ${port}`);

@@ -1,4 +1,4 @@
-module.exports = function(app, passport, MongoClient){
+module.exports = function(app, passport, MongoClient, urlencodedParser){
   // login
   app.get('/login', (req, res) => {
     res.render('auth/login', {
@@ -45,9 +45,8 @@ module.exports = function(app, passport, MongoClient){
   });
 
   // page edits
-  app.get('/auth-home', isLoggedIn, (req, res) => {
-    res.render('/auth/auth-home');
-  });
+  require('./modifications')(app, isLoggedIn, MongoClient, urlencodedParser);
+
 
   // logout
   app.get('/logout', (req, res) => {
