@@ -1,4 +1,4 @@
-module.exports = function(app, passport){
+module.exports = function(app, passport, MongoClient){
   // login
   app.get('/login', (req, res) => {
     res.render('auth/login', {
@@ -28,9 +28,25 @@ module.exports = function(app, passport){
 
   // profile
   app.get('/profile', isLoggedIn, (req, res) => {
-    res.render('auth/profile', {
-      user: req.user
+    var text;
+    MongoClient.connect("mongodb://localhost:27017/manage", (err, db) => {
+      db.collection("data", (err, collection) => {
+        collection.find().toArray((err, result) => {
+          if(err){
+            return err;
+          }
+          res.render('auth/profile', {
+            user: req.user,
+            text: result[0].string
+          });
+        });
+      });
     });
+  });
+
+  // page edits
+  app.get('/auth-home', isLoggedIn, (req, res) => {
+    res.render('/auth/auth-home');
   });
 
   // logout

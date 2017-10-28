@@ -100,9 +100,9 @@ module.exports = function(app, urlencodedParser){
   // });
 
   //delete comment
-  app.post('/eng/delete', (req, res)=>{
-
-  });
+  // app.post('/eng/delete', (req, res)=>{
+  //
+  // });
 
   app.get('/eng/contact-us', (req, res)=>{
     res.render('english/contact');
