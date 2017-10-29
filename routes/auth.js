@@ -28,20 +28,7 @@ module.exports = function(app, passport, MongoClient, urlencodedParser){
 
   // profile
   app.get('/profile', isLoggedIn, (req, res) => {
-    var text;
-    MongoClient.connect("mongodb://localhost:27017/manage", (err, db) => {
-      db.collection("data", (err, collection) => {
-        collection.find().toArray((err, result) => {
-          if(err){
-            return err;
-          }
-          res.render('auth/profile', {
-            user: req.user,
-            text: result[0].string
-          });
-        });
-      });
-    });
+    res.render('auth/profile');
   });
 
   // page edits

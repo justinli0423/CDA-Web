@@ -14,20 +14,28 @@
 </head>
 <body>
 <div class="container">
-    <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Management</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    </div>
-
-    <div class="row">
-        <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Site Management</h3>
-                <strong>Home</strong><br />
-            </div>
+  <div class="page-header text-center">
+    <h1><span class="fa fa-anchor"></span> Home</h1>
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+  </div>
+  <div class="row">
+    <!-- LOCAL INFORMATION -->
+    <div class="col-sm-12">
+      <div class="well">
+        <h2><span class="fa fa-user"></span> Site Management</h2><br />
+        <div class = "form-group">
+          <form method = "post" action = "modify">
+            <textarea class = "form-control text" name = "title1"><%= title1 %></textarea>
+            <textarea class = "form-control text" name = "text1"><%= text1 %></textarea>
+            <textarea class = "form-control text" name = "subtitle1"><%= subtitle1 %></textarea>
+            <textarea class = "form-control text" name = "text2"><%= text2 %></textarea>
+            <textarea class = "form-control text" name = "subtitle2"><%= subtitle2 %></textarea>
+            <input type = "submit" /><br /><br />
+          </form>
         </div>
+      </div>
     </div>
+  </div>
     <div>
     <p><a href="/profile">Back</a></p>
     </div>

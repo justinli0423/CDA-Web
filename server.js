@@ -18,7 +18,6 @@ const path = require('path');
 const passport = require('passport');
 const flash = require('connect-flash');
 
-
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
 });

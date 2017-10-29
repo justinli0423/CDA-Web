@@ -16,8 +16,17 @@ strong{
   font-size: 15px;
 }
 
-a{
+.manage-links{
   display: flex;
   text-align: right;
   font-size: 12px;
+}
+
+input{
+  width: auto;
+}
+
+textarea{
+  font-family: inherit;
+  font-size: inherit;
 }
