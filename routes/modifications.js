@@ -2,7 +2,7 @@ module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
   // var {Home} = require('./models/home');
 
   app.get('/auth-home', isLoggedIn, (req, res) => {
-    MongoClient.connect("mongodb://localhost:27017/manage", (err, db) =>{
+    MongoClient.connect("mongodb://cda_web:Justin_199898li@ds127982.mlab.com:27982/heroku_d48w58zm", (err, db) =>{
       db.collection("home", (err, collection) => {
         collection.find().toArray((err, result) => {
           if(err){
@@ -22,7 +22,7 @@ module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
 
   // Send newly changed data background-color
   app.post('/modify', urlencodedParser, (req, res) => {
-    MongoClient.connect("mongodb://localhost:27017/manage", (err, db) => {
+    MongoClient.connect("mongodb://cda_web:Justin_199898li@ds127982.mlab.com:27982/heroku_d48w58zm", (err, db) => {
       db.collection("home", (err, collection) => {
         var querytitle1 = {title1: /^/};
         var title1 = {$set: {title1: req.body.title1}};
