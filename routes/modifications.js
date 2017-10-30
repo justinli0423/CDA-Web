@@ -24,13 +24,40 @@ module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
   app.post('/modify', urlencodedParser, (req, res) => {
     MongoClient.connect("mongodb://localhost:27017/manage", (err, db) => {
       db.collection("home", (err, collection) => {
-        var query = {title1: /^/};
-        var newVal = {$set: {title1: req.body.title1}};
-        collection.updateOne(query, newVal, (err, res) => {
+        var querytitle1 = {title1: /^/};
+        var title1 = {$set: {title1: req.body.title1}};
+        var querytext1 = {text1: /^/};
+        var text1 = {$set: {text1: req.body.text1}};
+        var querysubtitle1 = {subtitle1: /^/};
+        var subtitle1 = {$set: {subtitle1: req.body.subtitle1}};
+        var querytext2 = {text2: /^/};
+        var text2 = {$set: {text2: req.body.text2}};
+        var querysubtitle2 = {subtitle2: /^/};
+        var subtitle2 = {$set: {subtitle2: req.body.subtitle2}};
+        collection.updateOne(querytitle1, title1, (err, res) => {
           if(err){
             return err;
           }
-          console.log(req.body.title1);
+        });
+        collection.updateOne(querytext1, text1, (err, res) => {
+          if(err){
+            return err;
+          }
+        });
+        collection.updateOne(querysubtitle1, subtitle1, (err, res) => {
+          if(err){
+            return err;
+          }
+        });
+        collection.updateOne(querytext2, text2, (err, res) => {
+          if(err){
+            return err;
+          }
+        });
+        collection.updateOne(querysubtitle2, subtitle2, (err, res) => {
+          if(err){
+            return err;
+          }
         });
       });
     });
