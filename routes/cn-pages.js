@@ -1,4 +1,4 @@
-module.exports = function(app, urlencodedParser){
+module.exports = function(app, urlencodedParser, nodemailer){
   // --------------------Chinese section--------------------
   app.get('/cn/', (req, res)=>{
       res.render('chinese/home');

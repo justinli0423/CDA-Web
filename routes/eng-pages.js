@@ -1,4 +1,4 @@
-module.exports = function(app, urlencodedParser){
+module.exports = function(app, urlencodedParser, nodemailer){
   // acquire schema
   var {Home} = require('../models/home');
   var query = {title1: /^/};

@@ -58,8 +58,8 @@ app.get('/intro', (req, res)=>{
 require('./config/passport')(passport);
 
 // loading routes for english and chinese pages
-require('./routes/eng-pages')(app, urlencodedParser);
-require('./routes/cn-pages')(app, urlencodedParser);
+require('./routes/eng-pages')(app, urlencodedParser, nodemailer);
+require('./routes/cn-pages')(app, urlencodedParser, nodemailer);
 
 // auth routes
 require('./routes/auth.js')(app, passport, MongoClient, urlencodedParser);
