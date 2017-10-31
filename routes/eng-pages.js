@@ -1,7 +1,21 @@
 module.exports = function(app, urlencodedParser){
+  // acquire schema
+  var {Home} = require('../models/home');
+  var query = {title1: /^/};
   // English pages
   app.get('/eng', (req, res)=>{
-      res.render('english/home');
+    Home.findOne(query, (err, doc) => {
+      if(err){
+        return err;
+      }
+      res.render('english/home', {
+        title1: doc.title1,
+        text1: doc.text1,
+        subtitle1: doc.subtitle1,
+        subtitle2: doc.subtitle2,
+        text2: doc.text2
+      });
+    });
   });
 
   app.get('/eng/about-us', (req, res)=>{
