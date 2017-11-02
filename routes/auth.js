@@ -12,19 +12,19 @@ module.exports = function(app, passport, MongoClient, urlencodedParser){
     failureFlash: true
   }));
 
-  // signup
-  app.get('/signup', (req, res) => {
-    res.render('auth/signup', {
-      message: req.flash('signupMessage')
-    });
-  });
-
-  // process signup
-  app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/profile',
-    failureRedirect: '/signup',
-    failureFlash: true
-  }));
+  // // signup
+  // app.get('/signup', (req, res) => {
+  //   res.render('auth/signup', {
+  //     message: req.flash('signupMessage')
+  //   });
+  // });
+  // 
+  // // process signup
+  // app.post('/signup', passport.authenticate('local-signup', {
+  //   successRedirect: '/profile',
+  //   failureRedirect: '/signup',
+  //   failureFlash: true
+  // }));
 
   // profile
   app.get('/profile', isLoggedIn, (req, res) => {

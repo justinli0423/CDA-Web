@@ -30,7 +30,7 @@ module.exports = function(passport){
 
           // Check to see if user exists with that email
           if(user){
-            return done(null, false, req.flash('signupMessage', 'Email exists'));
+            return done(null, false, req.flash('signupMessage', 'Username exists'));
           }else{
             var newUser = new User();
 
@@ -63,7 +63,7 @@ module.exports = function(passport){
       }
 
       if(!user){
-        return done(null, false, req.flash('loginMessage', 'No user found'));
+        return done(null, false, req.flash('loginMessage', 'Username Incorrect'));
       }
 
       if(!user.validPassword(password)){
