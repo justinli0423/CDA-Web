@@ -17,7 +17,10 @@ var Home = mongoose.model('Home', {
   },
   subtitle2:{
     type: String
-  }
+  },
+  list: [{
+    type: String
+  }]
 });
 
 module.exports = {
