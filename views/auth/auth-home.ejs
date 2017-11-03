@@ -25,11 +25,17 @@
         <h2><span class="fa fa-user"></span> Site Management</h2><br />
         <div class = "form-group">
           <form method = "post" action = "modify">
+            <textarea class = "form-control text" name = "titlep1"><%= titlep1 %></textarea>
+            <textarea class = "form-control text" name = "titlep2"><%= titlep2 %></textarea>
             <textarea class = "form-control text" name = "title1"><%= title1 %></textarea>
             <textarea class = "form-control text" name = "text1"><%= text1 %></textarea>
             <textarea class = "form-control text" name = "subtitle1"><%= subtitle1 %></textarea>
             <textarea class = "form-control text" name = "text2"><%= text2 %></textarea>
             <textarea class = "form-control text" name = "subtitle2"><%= subtitle2 %></textarea>
+            <h3>List (Not working yet)</h3>
+            <% list.forEach((item) => { %>
+              <textarea class = "form-control text"><%- item %></textarea>
+            <%}) %>
             <input type = "submit" /><br /><br />
           </form>
         </div>

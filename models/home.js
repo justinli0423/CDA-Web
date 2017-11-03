@@ -3,6 +3,12 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 var Home = mongoose.model('Home', {
+  titlep1:{
+    type: String
+  },
+  titlep2:{
+    type: String
+  },
   title1:{
     type: String
   },

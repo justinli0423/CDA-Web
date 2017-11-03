@@ -9,12 +9,16 @@ module.exports = function(app, urlencodedParser, nodemailer){
         return err;
       }
       res.render('english/home', {
+        titlep1: doc.titlep1,
+        titlep2: doc.titlep2,
         title1: doc.title1,
         text1: doc.text1,
         subtitle1: doc.subtitle1,
         subtitle2: doc.subtitle2,
-        text2: doc.text2
+        text2: doc.text2,
+        list: doc.list
       });
+      console.log(doc.title1);
     });
   });
 

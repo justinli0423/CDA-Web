@@ -9,11 +9,14 @@ module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
         return err;
       }
       res.render('auth/auth-home', {
+        titlep1: doc.titlep1,
+        titlep2: doc.titlep2,
         title1: doc.title1,
         text1: doc.text1,
         subtitle1: doc.subtitle1,
         subtitle2: doc.subtitle2,
-        text2: doc.text2
+        text2: doc.text2,
+        list: doc.list
       });
     });
   });
@@ -23,6 +26,8 @@ module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
     var query = {title1: /^/};
     // upsert creates if query isn't found
     Home.findOneAndUpdate(query, {
+      titlep1: req.body.titlep1,
+      titlep2: req.body.titlep2,
       title1: req.body.title1,
       text1: req.body.text1,
       subtitle1: req.body.subtitle1,

@@ -29,4 +29,5 @@ input{
 textarea{
   font-family: inherit;
   font-size: inherit;
+  rows: 10
 }
