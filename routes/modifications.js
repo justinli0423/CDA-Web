@@ -1,6 +1,7 @@
 module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
   // acquire schema
   var {Home} = require('../models/home');
+  var {Testimonial} = require('../models/testimonials');
 
   app.get('/auth-home', isLoggedIn, (req, res) => {
     var query = {title1: /^/};
@@ -63,6 +64,23 @@ module.exports = function(app, isLoggedIn, MongoClient, urlencodedParser){
 
   app.get('/auth-testimonials', isLoggedIn, (req, res) => {
     res.render('auth/auth-testimonials');
+  });
+
+  // post request for new testimonials
+  app.post('/commentSubmit', urlencodedParser, (req, res) => {
+    res.redirect('/profile');
+    let comment = req.body.comment;
+    // The /xxx/g will replace all 'xxx' within the string
+    comment = comment.replace(/\r\n/g, "<br />");
+      let testimonial = new Testimonial({
+        comment
+      });
+      testimonial.save().then((doc)=>{
+        console.log("success");
+        res.send(doc);
+      }).catch((e)=>{
+        res.status(400).send();
+      });
   });
 
 }

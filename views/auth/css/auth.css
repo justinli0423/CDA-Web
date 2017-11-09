@@ -22,12 +22,19 @@ strong{
   font-size: 12px;
 }
 
-input{
+.input{
   width: auto;
 }
 
-textarea{
+.textarea{
   font-family: inherit;
   font-size: inherit;
-  rows: 10
+}
+
+.textbox{
+  font-size:16px !important;
+  height: auto;
+  width:200em;
+  padding:0;
+  margin:0
 }

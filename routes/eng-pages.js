@@ -1,6 +1,7 @@
 module.exports = function(app, urlencodedParser, nodemailer){
   // acquire schema
   var {Home} = require('../models/home');
+  var {Testimonial} = require('../models/testimonials');
   var query = {title1: /^/};
   // English pages
   app.get('/eng', (req, res)=>{
@@ -85,8 +86,21 @@ module.exports = function(app, urlencodedParser, nodemailer){
   });
 
   app.get('/eng/testimonials', (req, res)=>{
-    res.render('english/testimonials');
+    Testimonial.find({}, (err, comments) => {
+      var commentMap = {};
+      let count = 0;
+      comments.forEach((res) => {
+        commentMap[count] = res.comment;
+        count++;
+      });
+      console.log(commentMap);
+      res.render('english/testimonials', {
+        commentMap,
+        count
+      });
+    });
   });
+
 
   app.get('/eng/questions', (req, res)=>{
     res.render('english/qna');
@@ -101,26 +115,6 @@ module.exports = function(app, urlencodedParser, nodemailer){
   //   });
   // });
 
-  // Retrieving comments and call trigger method (disabled for now)
-  // app.post('/eng/comment', urlencodedParser, (req, res)=>{
-  //   changeId();
-  //   res.redirect('/eng/questions');
-  //   let comment = new Comment({
-  //     name : req.body.name,
-  //     email: req.body.email,
-  //     comment: req.body.comment
-  //   });
-  //   comment.save().then((doc)=>{
-  //     res.send(doc);
-  //   }).catch((e)=>{
-  //     res.status(400).send();
-  //   });
-  // });
-
-  //delete comment
-  // app.post('/eng/delete', (req, res)=>{
-  //
-  // });
 
   app.get('/eng/contact-us', (req, res)=>{
     res.render('english/contact');
