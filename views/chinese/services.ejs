@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width = device-width, initial-scale = 1" />
+  <title>Canadian Driving Academy</title>
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
+  <!-- custom css -->
+  <link rel="stylesheet" type="text/css" href="/css/custom.css"></link>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"></link>
+  <!-- animation css -->
+  <link rel="stylesheet" type="text/css" href="/css/animate.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500i,600,600i,700,700i,800,800i,900|Source+Sans+Pro:300,300i,400,400i,600i,700,900" rel="stylesheet">
+  <!-- JQuery Google host -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css"></link>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- Header -->
+  <section class="header">
+    <% include ./partials/header %>
+  </section>
+  <section class = "navigation-bar">
+    <div class = "container">
+      <div class = "row">
+        <div class ="col-md-12">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="/cn/">主页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cn/services">服务种类</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cn/schedule">课程安排</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cn/registration">注册登记</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cn/testimonials">教练队伍</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cn/contact-us">联系方式</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class = "home">
+    <div class ="container">
+      <div class ="row">
+        <% include ./partials/left-advert %>
+        <div class = "col-md-8">
+          <h4 class = "red text">服务种类</h4>
+          <p class = "text">
+            根据不同的需求我们提供多种的服务如下：（免费接送在滑铁卢地区）
+          </p>
+          <p class = "bold text"><u class = "text">安省交通部（MTO）全科课程 $550</u></p>
+          <div class = "package">
+            <ul class = "text">
+              <li class = "text">
+                20小时课堂+10小时作业
+              </li>
+              <li class = "text">
+                10小时路面练车                
+              </li>
+              <li class = "text">
+                1对1练习
+              </li>
+            </ul>
+          </div>
+          <div style="width: 100%; height: 10px;"></div>
+          <p class = "bold text"><u class = "text">路考</u></p>
+          <div class = "package gray">
+            <ul class = "text">
+              <li class = "text">
+                G2 <span class = "red">$120 含考前1小时练车</span>
+              </li>
+              <li class = "text">
+                G <span class = "red">$120 含考前1小时练车</span>
+              </li>
+            </ul>
+            <div id = "container">
+              <div class = "lambo">
+                <img src = "/images/lambo.png"/>
+              </div>
+                  <a href="registration"><p id = "register" class = "red register-box">Register Now</p></a>
+            </div>
+          </div>
+          <div style="width: 100%; height: 10px;"></div>
+          <p class = "bold text"><u class = "text">散钟练车</u></p>
+          <div class = "package gray">
+              <div style="width: 100%"></div>
+              <p class = "text">
+                G2/G: $45 每小时
+                <br /> <br />
+                G: $50 每小时（之前不是驾校的学员）
+                <br /> <br />
+                G1 理论课程: $75
+              </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class = "footer">
+    <% include ./partials/footer %>
+  </section>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- custom animation js -->
+  <script src="/js/wow.min.js"></script>
+  <script type="text/javascript" src="/js/animate.js"></script>
+</body>
+</html>

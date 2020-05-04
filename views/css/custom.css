@@ -207,7 +207,7 @@ li.nav-item {
 }
 
 .package-bold{
-  border: 2px solid #e71d26;
+  /* border: 2px solid #e71d26; */
   border-radius: 10px;
   padding-left: 10px;
   padding-top: 10px;
