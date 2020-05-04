@@ -1,4 +1,4 @@
-module.exports = function(app, passport){
+module.exports = function(app, passport, MongoClient, urlencodedParser){
   // login
   app.get('/login', (req, res) => {
     res.render('auth/login', {
@@ -12,26 +12,28 @@ module.exports = function(app, passport){
     failureFlash: true
   }));
 
-  // signup
-  app.get('/signup', (req, res) => {
-    res.render('auth/signup', {
-      message: req.flash('signupMessage')
-    });
-  });
-
-  // process signup
-  app.post('/signup', passport.authenticate('local-signup', {
-    successRedirect: '/profile',
-    failureRedirect: '/signup',
-    failureFlash: true
-  }));
+  // // signup
+  // app.get('/signup', (req, res) => {
+  //   res.render('auth/signup', {
+  //     message: req.flash('signupMessage')
+  //   });
+  // });
+  // 
+  // // process signup
+  // app.post('/signup', passport.authenticate('local-signup', {
+  //   successRedirect: '/profile',
+  //   failureRedirect: '/signup',
+  //   failureFlash: true
+  // }));
 
   // profile
   app.get('/profile', isLoggedIn, (req, res) => {
-    res.render('auth/profile', {
-      user: req.user
-    });
+    res.render('auth/profile');
   });
+
+  // page edits
+  require('./modifications')(app, isLoggedIn, MongoClient, urlencodedParser);
+
 
   // logout
   app.get('/logout', (req, res) => {
@@ -46,6 +48,6 @@ module.exports = function(app, passport){
       return next();
     }
     // redirect to home otherwise
-    res.redirect();
+    res.redirect('/login');
   }
 }

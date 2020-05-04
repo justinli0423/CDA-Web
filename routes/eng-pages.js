@@ -1,7 +1,26 @@
-module.exports = function(app, urlencodedParser){
+module.exports = function(app, urlencodedParser, nodemailer){
+  // acquire schema
+  var {Home} = require('../models/home');
+  var {Testimonial} = require('../models/testimonials');
+  var query = {title1: /^/};
   // English pages
   app.get('/eng', (req, res)=>{
-      res.render('english/home');
+    Home.findOne(query, (err, doc) => {
+      if(err){
+        return err;
+      }
+      res.render('english/home', {
+        titlep1: doc.titlep1,
+        titlep2: doc.titlep2,
+        title1: doc.title1,
+        text1: doc.text1,
+        subtitle1: doc.subtitle1,
+        subtitle2: doc.subtitle2,
+        text2: doc.text2,
+        list: doc.list
+      });
+      console.log(doc.title1);
+    });
   });
 
   app.get('/eng/about-us', (req, res)=>{
@@ -67,8 +86,21 @@ module.exports = function(app, urlencodedParser){
   });
 
   app.get('/eng/testimonials', (req, res)=>{
-    res.render('english/testimonials');
+    Testimonial.find({}, (err, comments) => {
+      var commentMap = {};
+      let count = 0;
+      comments.forEach((res) => {
+        commentMap[count] = res.comment;
+        count++;
+      });
+      console.log(commentMap);
+      res.render('english/testimonials', {
+        commentMap,
+        count
+      });
+    });
   });
+
 
   app.get('/eng/questions', (req, res)=>{
     res.render('english/qna');
@@ -83,26 +115,6 @@ module.exports = function(app, urlencodedParser){
   //   });
   // });
 
-  // Retrieving comments and call trigger method (disabled for now)
-  // app.post('/eng/comment', urlencodedParser, (req, res)=>{
-  //   changeId();
-  //   res.redirect('/eng/questions');
-  //   let comment = new Comment({
-  //     name : req.body.name,
-  //     email: req.body.email,
-  //     comment: req.body.comment
-  //   });
-  //   comment.save().then((doc)=>{
-  //     res.send(doc);
-  //   }).catch((e)=>{
-  //     res.status(400).send();
-  //   });
-  // });
-
-  //delete comment
-  app.post('/eng/delete', (req, res)=>{
-
-  });
 
   app.get('/eng/contact-us', (req, res)=>{
     res.render('english/contact');

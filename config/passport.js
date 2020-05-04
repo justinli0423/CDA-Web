@@ -30,7 +30,7 @@ module.exports = function(passport){
 
           // Check to see if user exists with that email
           if(user){
-            return done(null, false, req.flash('signupMessage', 'Email exists'));
+            return done(null, false, req.flash('signupMessage', 'Username exists'));
           }else{
             var newUser = new User();
 
@@ -53,7 +53,7 @@ module.exports = function(passport){
   passport.use('local-login', new LocalStrategy({
     usernameField: 'username',
     passwordField: 'password',
-    passReqTocallback: true
+    passReqToCallback: true
   },
   function(req, username, password, done){ //callback with username and password
     // find user
@@ -63,7 +63,7 @@ module.exports = function(passport){
       }
 
       if(!user){
-        return done(null, false, req.flash('loginMessage', 'No user found'));
+        return done(null, false, req.flash('loginMessage', 'Username Incorrect'));
       }
 
       if(!user.validPassword(password)){
@@ -71,7 +71,7 @@ module.exports = function(passport){
       }
 
       // if all is good
-      return done(null, user);
-    })
-  }))
+      return done(null, user)
+    });
+  }));
 };

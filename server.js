@@ -1,22 +1,23 @@
 require('./config/config');
 
 const express = require('express');
-const nodemailer = require('nodemailer');
-const promise = require('promise');
-const MongoClient = require('mongodb').MongoClient;
-const path = require('path');
+var app = express();
+
+const port = process.env.PORT || 3000;
+var {mongoose} = require('./db/mongoose');
+
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const MongoClient = require('mongodb').MongoClient;
+
+const nodemailer = require('nodemailer');
+const promise = require('promise');
+const path = require('path');
 const passport = require('passport');
 const flash = require('connect-flash');
 
-var {mongoose} = require('./db/mongoose');
-
-const port = process.env.PORT || 3000;
-
-var app = express();
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
 });
@@ -25,18 +26,23 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+// setup express
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser());
-app.use('/', express.static('views'));
+
+// set view engine
 app.set('view engine', 'ejs');
 
+// passport setup
 app.use(session({
   secret: 'adfasdf3bmert86453nsbn3434oopj7864'
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+
+app.use('/', express.static('views'));
 
 // selections page
 app.get('/', (req, res)=>{
@@ -52,11 +58,11 @@ app.get('/intro', (req, res)=>{
 require('./config/passport')(passport);
 
 // loading routes for english and chinese pages
-require('./routes/eng-pages')(app, urlencodedParser);
-require('./routes/cn-pages')(app, urlencodedParser);
+require('./routes/eng-pages')(app, urlencodedParser, nodemailer);
+require('./routes/cn-pages')(app, urlencodedParser, nodemailer);
 
 // auth routes
-require('./routes/auth.js')(app, passport);
+require('./routes/auth.js')(app, passport, MongoClient, urlencodedParser);
 
 app.listen(port, ()=>{
   console.log(`Server is up on port ${port}`);

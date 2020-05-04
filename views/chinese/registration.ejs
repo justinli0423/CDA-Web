@@ -57,33 +57,22 @@
         <div class ="col-md-12">
           <ul class="nav justify-content-center">
             <li class="nav-item">
-              <a class="nav-link active" href="/cn/">Home</a>
+              <a class="nav-link active" href="/cn/">主页</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cn/about-us">About Us</a>
+              <a class="nav-link" href="/cn/services">服务种类</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cn/services">Services</a>
+              <a class="nav-link" href="/cn/schedule">课程安排</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cn/schedule">Schedule</a>
+              <a class="nav-link" href="/cn/registration">注册登记</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cn/registration">Registration</a>
+              <a class="nav-link" href="/cn/testimonials">教练队伍</a>
             </li>
-<<<<<<< HEAD:views/registration.ejs
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="/questions">QnA</a>
-=======
             <li class="nav-item">
-              <a class="nav-link" href="/cn/testimonials">Testimonials</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href="/cn/questions">QnA</a>
->>>>>>> develop:views/chinese/registration.ejs
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="/cn/contact-us">Contact</a>
+              <a class="nav-link" href="/cn/contact-us">联系方式</a>
             </li>
           </ul>
         </div>
@@ -106,74 +95,73 @@
         </div>
         <div class = "col-md-5">
           <form id = "registrationForm" method = "post" action ="formProcess">
-            <h4 class = "text red">Registration</h4>
-            <h6 class = "bold text">Please complete the form below:</h6>
+            <h4 class = "text red">登记</h4>
+            <h6 class = "bold text">请完成以下表格:</h6>
             <div class="form-group">
               <label for="inputsm" required = "true">
                 <p class = "text">
-                First Name
+                名
                 </p>
               </label>
-              <input class="form-control input-sm text" id="inputsm" type="text" name = "firstName" autofocus required placeholder="First Name">
+              <input class="form-control input-sm text" id="inputsm" type="text" name = "firstName" autofocus required placeholder="名">
             </div>
             <div class="form-group">
               <label for="inputsm">
                 <p class = "text">
-                Last Name
+                姓
                 </p>
               </label>
-              <input class="form-control input-sm text" id="inputsm" type="text" name = "lastName" required placeholder="Last Name">
+              <input class="form-control input-sm text" id="inputsm" type="text" name = "lastName" required placeholder="姓">
             </div>
             <div class="form-group">
               <label for="inputsm">
                 <p class = "text">
-                Phone Number
+                电话号码
                 </p>
               </label>
-              <input class="form-control input-sm text" id="inputsm" type="text" name = "number" required placeholder="Phone Number">
+              <input class="form-control input-sm text" id="inputsm" type="text" name = "number" required placeholder="电话号码">
             </div>
             <div class="form-group">
               <label for="inputsm">
                 <p class = "text">
-                Email
+                邮箱
                 </p>
               </label>
-              <input class="form-control input-sm text" id="inputsm" type="text" name = "email" required placeholder="Email">
+              <input class="form-control input-sm text" id="inputsm" type="text" name = "email" required placeholder="邮箱">
             </div>
             <div class="form-group">
               <label for="course-selection">
                 <p class = "text">
-                  Course Selection
+                  课程选择
                 </p>
               </label>
               <select class="form-control" name = "course" id="course-selection">
-                <option name = "course" value = "Complete Course"><p class = "text">Complete Course</p></option>
-                <option name = "course" value = "G1 Exit"><p class = "text">G1 Exit</p></option>
-                <option name = "course" value = "G2 Exit"><p class = "text">G2 Exit</p></option>
-                <option name = "course" value = "Single Lesson"><p class = "text">Single Lesson</p></option>
-                <option name = "course" value = "Written Test Preperation"><p class = "text">Written Test Preperation</p></option>
+                <option name = "course" value = "全科课程"><p class = "text">全科课程</p></option>
+                <option name = "course" value = "G2"><p class = "text">G2</p></option>
+                <option name = "course" value = "G"><p class = "text">G</p></option>
+                <option name = "course" value = "G1 理论"><p class = "text">G1 理论</p></option>
               </select>
             </div>
             <div class = "form-group">
               <p class = "text">
-                Requested Start Date
+                计划什么时候开始
               </p>
-              <input type = "text" name = "date" class = "form-control text" id = "datepicker" placeholder="Date"/>
+              <input type = "text" name = "计划什么时候开始" class = "form-control text" id = "datepicker" placeholder="日期"/>
             </div>
             <div class="form-group">
               <label for="sel1">
                 <p class = "text">
-                  How Did You Find Us
+                  如何找到我们
                 </p>
               </label>
               <select class="form-control" name = "find" id="sel1">
-                <option><p class = "text" name = "find" value = "Online">Online</p></option>
-                <option><p class = "text" name = "find" value = "Friend Referral">Friend Referral</p></option>
-                <option><p class = "text" name = "find" value = "Other">Other</p></option>
+                <option><p class = "text" name = "find" value = "网上">网上</p></option>
+                <option><p class = "text" name = "find" value = "朋友推荐">朋友推荐</p></option>
+                <option><p class = "text" name = "find" value = "其他">其他</p></option>
               </select>
             </div>
             <div class = "form-group">
-              <button type="submit" class="btn btn-primary register-submit" onclick = "this.blur()" action = "submit">Submit <i class = "fa fa-check" aria-hidden="true"></i></button>
+              <button type="submit" class="btn btn-primary register-submit" onclick = "this.blur()" action = "submit">提交 <i class = "fa fa-check" aria-hidden="true"></i></button>
             </div>
           </form>
         </div>

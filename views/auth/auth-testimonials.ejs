@@ -14,7 +14,6 @@
 </head>
 <body>
 <div class="container">
-
     <div class="page-header text-center">
         <h1><span class="fa fa-anchor"></span> Management</h1>
         <a href="/logout" class="btn btn-default btn-sm">Logout</a>
@@ -24,19 +23,18 @@
         <!-- LOCAL INFORMATION -->
         <div class="col-sm-6">
             <div class="well">
-                <h3><span class="fa fa-user"></span> Site Management</h3>
-                <strong>Home</strong><a class = "manage-links" href = "/auth-home">Edit</a><br />
-                <strong>About Us</strong><a class = "manage-links" href = "/auth-aboutus">Edit</a><br />
-                <strong>Services</strong><a class = "manage-links" href = "/auth-services">Edit</a><br />
-                <strong>Schedule</strong><a class = "manage-links" href = "/auth-schedule">Edit</a><br />
-                <strong>Registration</strong><a class = "manage-links" href = "/auth-registration">Edit</a><br />
-                <strong>Testimonials</strong><a class = "manage-links" href = "/auth-testimonials">Edit</a><br />
-                <strong>Contact</strong><a class = "manage-links" href = "/auth-contact">Edit</a>
+                <h3><span class = "fa fa-user"></span> Site Management</h3>
+                <strong>Testimonials</strong><br />
+                <div class = "form-group">
+                  <form method = "post" action = "commentSubmit">
+                    <textarea class = "form-control textbox text" name = "comment" rows = "15"></textarea>
+                    <input type = "submit" /><br /><br />
+                  </form>
+                  <p><a href="/profile">Back</a></p>
             </div>
         </div>
-
     </div>
-
-</div>
+    <div>
+    </div>
 </body>
 </html>
