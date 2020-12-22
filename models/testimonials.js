@@ -1,13 +1,13 @@
-const mongoose = require('mongoose');
+// const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
+// const Schema = mongoose.Schema;
 
-var Testimonial = mongoose.model('Testimonial', {
-  comment:{
-    type: String
-  }
-});
+// var Testimonial = mongoose.model('Testimonial', {
+//   comment:{
+//     type: String
+//   }
+// });
 
-module.exports = {
-  Testimonial
-}
+// module.exports = {
+//   Testimonial
+// }

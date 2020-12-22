@@ -4,7 +4,6 @@ const express = require('express');
 var app = express();
 
 const port = process.env.PORT || 3000;
-var {mongoose} = require('./db/mongoose');
 
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
@@ -13,8 +12,6 @@ const session = require('express-session');
 const MongoClient = require('mongodb').MongoClient;
 
 const nodemailer = require('nodemailer');
-const promise = require('promise');
-const path = require('path');
 const passport = require('passport');
 const flash = require('connect-flash');
 
