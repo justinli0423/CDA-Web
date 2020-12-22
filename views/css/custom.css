@@ -19,9 +19,6 @@
     display: none;
     transition: 0s !important;
   }
-  .languages{
-    left:33.5% !important;
-  }
 }
 
 /*ipads*/
@@ -46,9 +43,6 @@
     display: none;
     transition: 0s !important;
   }
-  .languages{
-    left:33.5% !important;
-  }
 }
 
 /*Iphones 6*/
@@ -59,9 +53,6 @@
   .car{
     display: none;
     transition: 0s !important;
-  }
-  .languages{
-    left:30% !important;
   }
   .english{
     margin-right: 20px;
