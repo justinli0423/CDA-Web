@@ -1,6 +1,7 @@
 require('./config/config');
 
 const express = require('express');
+const cors = require('cors');
 var app = express();
 
 const port = process.env.PORT || 3000;
@@ -27,7 +28,7 @@ app.use(bodyParser.urlencoded({
 app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser());
-
+app.use(cors());
 // set view engine
 app.set('view engine', 'ejs');
 
