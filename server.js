@@ -20,8 +20,6 @@ var urlencodedParser = bodyParser.urlencoded({
   extended: false
 });
 
-cors({credentials: true, origin: true});
-
 app.use(bodyParser.urlencoded({
   extended: true
 }));
@@ -43,6 +41,13 @@ app.use(passport.session());
 app.use(flash());
 
 app.use('/', express.static('views'));
+
+app.all('/*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
 
 // selections page
 app.get('/', (req, res)=>{
