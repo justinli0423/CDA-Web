@@ -54,6 +54,8 @@ module.exports = function (app, urlencodedParser, nodemailer) {
   });
 
   app.post('/eng/formProcess', urlencodedParser, (req, res) => {
+    console.log('HERE');
+    console.log(req);
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
     var number = req.body.number;
@@ -91,7 +93,7 @@ module.exports = function (app, urlencodedParser, nodemailer) {
         res.redirect('/eng/completed');
         res.status(200).send();
       }
-      res.status(400).send();
+      // res.status(400).send();
     });
   });
 
