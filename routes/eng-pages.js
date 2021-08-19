@@ -86,9 +86,11 @@ module.exports = function (app, urlencodedParser, nodemailer) {
     transporter.sendMail(HelperOptions, (error, resp) => {
       if (!error) {
         res.redirect('/eng/completed');
-        // res.status(200).send();
+        res.status(200).send();
+      } else {
+        console.log(error);
+        res.status(400).send();
       }
-      res.status(200).send();
     });
   });
 
