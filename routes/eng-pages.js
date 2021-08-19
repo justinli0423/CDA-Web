@@ -78,7 +78,7 @@ module.exports = function (app, urlencodedParser, nodemailer) {
 
     //extra settings for email
     let HelperOptions = {
-      from: '"CDA Registration" <cdaregister@gmail.com',
+      from: '"CDA Registration" <cdaregister@gmail.com>',
       to: 'canadiandrivingacademy@gmail.com',
       subject: 'Student Registration',
       text: 'Name: ' + firstName + ' ' + lastName + '\n\nNumber: ' + number + '\n\nEmail: ' + email
