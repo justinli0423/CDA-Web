@@ -20,6 +20,8 @@ var urlencodedParser = bodyParser.urlencoded({
   extended: false
 });
 
+cors({credentials: true, origin: true});
+
 app.use(bodyParser.urlencoded({
   extended: true
 }));
