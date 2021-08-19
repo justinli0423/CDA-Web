@@ -70,9 +70,6 @@ module.exports = function (app, urlencodedParser, nodemailer) {
       auth: {
         user: "cdaregister@gmail.com",
         pass: "416419416"
-      },
-      tls: {
-        rejectUnauthorized: false
       }
     });
 
@@ -86,14 +83,12 @@ module.exports = function (app, urlencodedParser, nodemailer) {
     };
 
     //send mail here
-    transporter.sendMail(HelperOptions, (error, info) => {
-      console.log('SENDING MAIL');
-      console.log(error);
+    transporter.sendMail(HelperOptions, (error, resp) => {
       if (!error) {
         res.redirect('/eng/completed');
-        res.status(200).send();
+        // res.status(200).send();
       }
-      // res.status(400).send();
+      res.status(200).send();
     });
   });
 
