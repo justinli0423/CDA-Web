@@ -54,8 +54,6 @@ module.exports = function (app, urlencodedParser, nodemailer) {
   });
 
   app.post('/eng/formProcess', urlencodedParser, (req, res) => {
-    console.log('HERE');
-    console.log(req);
     var firstName = req.body.firstName;
     var lastName = req.body.lastName;
     var number = req.body.number;
@@ -89,6 +87,9 @@ module.exports = function (app, urlencodedParser, nodemailer) {
 
     //send mail here
     transporter.sendMail(HelperOptions, (error, info) => {
+      console.log('SENDING MAIL');
+      console.log(error);
+      console.log(info);
       if (!error) {
         res.redirect('/eng/completed');
         res.status(200).send();
